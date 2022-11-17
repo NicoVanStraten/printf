@@ -6,7 +6,7 @@
 #    By: nvan-str <nvan-str@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/11/11 16:54:51 by nvan-str      #+#    #+#                  #
-#    Updated: 2022/11/11 16:57:41 by nvan-str      ########   odam.nl          #
+#    Updated: 2022/11/17 13:15:45 by nvan-str      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME = libftprintf.a
 SRC =	ft_putchar.c\
 		ft_putstr.c\
 		ft_putnbr.c\
+		ft_printf.c\
 		
 
 OBJ = $(SRC:.c=.o)

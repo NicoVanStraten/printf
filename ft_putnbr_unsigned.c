@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putchar.c                                       :+:    :+:            */
+/*   ft_putnbr_unsigned.c                               :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/11/11 16:10:25 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/11/17 13:17:08 by nvan-str      ########   odam.nl         */
+/*   Created: 2022/11/16 11:11:37 by nvan-str      #+#    #+#                 */
+/*   Updated: 2022/11/16 11:18:32 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_libft.h"
 
-int	ft_putchar(char c)
+unsigned int	ft_putnbr_unsigned(unsigned int n)
 {
-	write (1, &c, 1);
-	return (1);
+	
 }
-
-// int	main(void)
-// {
-// 	char	c;
-
-// 	c = '3';
-// 	ft_putchar(c);
-// }

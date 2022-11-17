@@ -6,11 +6,11 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 12:16:59 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/11/11 17:23:36 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/11/17 13:42:08 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
+#include "ft_printf.h"
 
 int	ft_putnbr(int n)
 {
@@ -20,7 +20,7 @@ int	ft_putnbr(int n)
 	printlen = 0;
 	if (n == -2147483648)
 	{
-		ft_putstr_fd("-2147483648", 1);
+		ft_putstr("-2147483648");
 		return (12);
 	}
 	if (n < 0)
@@ -36,3 +36,11 @@ int	ft_putnbr(int n)
 	printlen++;
 	return (printlen);
 }
+
+// int	main(void)
+// {
+// 	int n;
+
+// 	n = 10000;
+// 	ft_putnbr(n);
+// }

@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_putnbr_unsigned.c                               :+:    :+:            */
+/*   ft_num_in_hex.c                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/11/16 11:11:37 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/11/17 17:43:07 by nvan-str      ########   odam.nl         */
+/*   Created: 2022/11/18 13:43:40 by nvan-str      #+#    #+#                 */
+/*   Updated: 2022/11/18 19:49:33 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-// #include <stdio.h>
+#include <stdio.h>
 
-int	ft_putnbr_unsigned(unsigned int n)
-{
-	int	printlen;
-
-	printlen = 0;
-	if (n >= 10)
-		printlen += ft_putnbr(n / 10);
-	ft_putchar((n % 10) + '0');
-	printlen++;
-	return (printlen);
-}
-
-// int	main(void)
+// int	ft_num_in_hex(int n)
 // {
-// 	unsigned int	n;
-
-// 	n = -12345678;
-// 	ft_putnbr_unsigned(n);
-// 	printf("\n");
-// 	printf("%u\npenis", n);
+	
 // }
+
+int	main(void)
+{
+	int	a;
+	int	b;
+	int	c;
+
+	a = 120;
+	b = 30;
+	c = 2;
+	printf("real function x : %x %x %x", a, b, c);
+	printf("\n⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶\n");
+	printf("real function X : %X %X %X", a, b, c);
+}

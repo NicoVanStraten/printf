@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/11 17:20:04 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/11/17 13:42:54 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/11/18 19:53:19 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,20 @@ int	check(va_list args, const char *s)
 {
 	if (*s == 'c')
 		return (ft_putchar(va_arg(args, int)));
-	if (*s == 's')
+	else if (*s == 's')
 		return (ft_putstr(va_arg(args, char *)));
-	if (*s == 'd')
+	else if (*s == 'd' || *s == 'i')
 		return (ft_putnbr(va_arg(args, int)));
+	else if (*s == 'u')
+		return (ft_putnbr_unsigned(va_arg(args, unsigned int)));
+	else if (*s == 'x')
+		return (ft_num_in_hex(va_arg(args, int)));
+	else if (*s == 'X')
+		return (ft_num_in_hex(va_arg(args, int)));
+	else if (*s == 'p')
+		return ();
+	else if (*s == '%')
+		return (ft_putchar('%'));
 	return (0);
 }
 
@@ -50,10 +60,26 @@ int	ft_printf(const char *s, ...)
 
 int	main(void)
 {
-	char	*str;
-	int		nb;
+	char			*str;
+	int				nb;
+	unsigned int	unb;
+	char			c;
 
-	str = "hallo hallo";
+	str = "this works";
 	nb = 123456;
-	ft_printf("test: %d", nb);
+	unb = -123;
+	c = 'D';
+	ft_printf("test number: %d", nb);
+	ft_printf("\n----------------\n");
+	ft_printf("test string: %s", str);
+	ft_printf("\n----------------\n");
+	ft_printf("test char: %c", c);
+	ft_printf("\n----------------\n");
+	ft_printf("test interger: %i", nb);
+	ft_printf("\n----------------\n");
+	ft_printf("test number: %u", unb);
+	ft_printf("\n----------------\n");
+	ft_printf("test number: %%");
+	ft_printf("\n");
+	
 }

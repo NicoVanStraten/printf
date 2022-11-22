@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/11 17:20:04 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/11/18 19:53:19 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/11/18 19:54:58 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ int	check(va_list args, const char *s)
 		return (ft_putnbr(va_arg(args, int)));
 	else if (*s == 'u')
 		return (ft_putnbr_unsigned(va_arg(args, unsigned int)));
-	else if (*s == 'x')
-		return (ft_num_in_hex(va_arg(args, int)));
-	else if (*s == 'X')
-		return (ft_num_in_hex(va_arg(args, int)));
-	else if (*s == 'p')
-		return ();
-	else if (*s == '%')
+	// else if (*s == 'x')
+	// 	return (ft_num_in_hex(va_arg(args, int)));
+	// else if (*s == 'X')
+	// 	return (ft_num_in_hex(va_arg(args, int)));
+	// else if (*s == 'p')
+	// 	return ();
+	// else if (*s == '%')
 		return (ft_putchar('%'));
 	return (0);
 }
@@ -58,28 +58,27 @@ int	ft_printf(const char *s, ...)
 	return (strlen);
 }
 
-int	main(void)
-{
-	char			*str;
-	int				nb;
-	unsigned int	unb;
-	char			c;
+// int	main(void)
+// {
+// 	char			*str;
+// 	int				nb;
+// 	unsigned int	unb;
+// 	char			c;
 
-	str = "this works";
-	nb = 123456;
-	unb = -123;
-	c = 'D';
-	ft_printf("test number: %d", nb);
-	ft_printf("\n----------------\n");
-	ft_printf("test string: %s", str);
-	ft_printf("\n----------------\n");
-	ft_printf("test char: %c", c);
-	ft_printf("\n----------------\n");
-	ft_printf("test interger: %i", nb);
-	ft_printf("\n----------------\n");
-	ft_printf("test number: %u", unb);
-	ft_printf("\n----------------\n");
-	ft_printf("test number: %%");
-	ft_printf("\n");
-	
-}
+// 	str = "this works";
+// 	nb = 123456;
+// 	unb = -123;
+// 	c = 'D';
+// 	ft_printf("test number: %d", nb);
+// 	ft_printf("\n----------------\n");
+// 	ft_printf("test string: %s", str);
+// 	ft_printf("\n----------------\n");
+// 	ft_printf("test char: %c", c);
+// 	ft_printf("\n----------------\n");
+// 	ft_printf("test interger: %i", nb);
+// 	ft_printf("\n----------------\n");
+// 	ft_printf("test number: %u", unb);
+// 	ft_printf("\n----------------\n");
+// 	ft_printf("test number: %%");
+// 	ft_printf("\n");
+// }

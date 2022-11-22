@@ -6,7 +6,7 @@
 #    By: nvan-str <nvan-str@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/11/11 16:54:51 by nvan-str      #+#    #+#                  #
-#    Updated: 2022/11/17 17:43:37 by nvan-str      ########   odam.nl          #
+#    Updated: 2022/11/18 19:58:18 by nvan-str      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ RM = /bin/rm -f
 
 %.o:%.c
 	@gcc -c $(FLAGS) -o $@ $^
-	@echo "👾 Compiling: $^"
+	@echo "📠 Compiling: $^"
 
 all : $(NAME)
 

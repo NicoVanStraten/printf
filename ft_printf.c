@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/11 17:20:04 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/11/18 19:54:58 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/12/02 10:42:30 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	check(va_list args, const char *s)
 		return (ft_putnbr(va_arg(args, int)));
 	else if (*s == 'u')
 		return (ft_putnbr_unsigned(va_arg(args, unsigned int)));
-	// else if (*s == 'x')
-	// 	return (ft_num_in_hex(va_arg(args, int)));
+	else if (*s == 'x')
+		return (ft_num_in_hex(va_arg(args, int)));
 	// else if (*s == 'X')
 	// 	return (ft_num_in_hex(va_arg(args, int)));
 	// else if (*s == 'p')

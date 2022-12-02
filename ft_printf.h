@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/11 16:58:18 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/11/17 17:43:20 by nvan-str      ########   odam.nl         */
+/*   Updated: 2022/12/02 10:43:30 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ int	ft_putchar(char c);
 int	ft_putnbr(int n);
 int	ft_putstr(char *str);
 int	ft_putnbr_unsigned(unsigned int n);
+int	ft_num_in_hex(int n);
 
 #endif 

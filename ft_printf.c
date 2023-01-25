@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/11 17:20:04 by nvan-str      #+#    #+#                 */
-/*   Updated: 2023/01/25 14:28:03 by nvan-str      ########   odam.nl         */
+/*   Updated: 2023/01/25 14:37:50 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,11 @@ int	check(va_list *args, const char *s)
 		return (ft_num_in_hex_up(va_arg(*args, unsigned int)));
 	else if (*s == '%')
 		return (ft_putchar('%'));
-	// else if (*s == 'p')
-	// 	return ();
+	else if (*s == 'p')
+	{
+		write (1, "0x", 2);
+		return (ft_num_in_hex_low(va_arg(*args, unsigned long)) + 2);
+	}
 	return (0);
 }
 
@@ -73,31 +76,24 @@ int	ft_printf(const char *s, ...)
 // 	c = 'D';
 // 	ft_printf("test number: %d", nb);
 // 	ft_printf("\n----------------\n");
-	
 // 	ft_printf("test string: %s", str);
 // 	ft_printf("\n----------------\n");
-	
 // 	ft_printf("test char: %c", c);
 // 	ft_printf("\n----------------\n");
 
 // 	ft_printf("test char:%c %c %c \n", '0', 0, '1');
 // 	   printf("real char:%c %c %c ", '0', 0, '1');
 // 	ft_printf("\n----------------\n");
-	
 // 	ft_printf("test char: %c %c %c \n", '1', '5', '3');
 // 	printf("real char: %c %c %c ", '1', '2', '3');
 // 	ft_printf("\n----------------\n");
-	
 // 	ft_printf("test char: %c %c %c \n", '2', '1', 0);
 // 	printf("real char: %c %c %c ", '2', '1', 0);
 // 	ft_printf("\n----------------\n");
-	
 // 	ft_printf("test interger: %i", nb);
-// 	ft_printf("\n----------------\n");
-	
+// 	ft_printf("\n----------------\n");	
 // 	ft_printf("test number: %u", unb);
-// 	ft_printf("\n----------------\n");
-	
+// 	ft_printf("\n----------------\n");	
 // 	ft_printf("test number: %%");
 // 	ft_printf("\n");
 // }

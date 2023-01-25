@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/18 13:43:40 by nvan-str      #+#    #+#                 */
-/*   Updated: 2023/01/25 14:28:10 by nvan-str      ########   odam.nl         */
+/*   Updated: 2023/01/25 14:37:31 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ int	ft_num_in_hex_low(unsigned long n)
 	return (total);
 }
 
-int ft_num_in_hex_up(unsigned long n)
+int	ft_num_in_hex_up(unsigned long n)
 {
-		char			c;
+	char			c;
 	unsigned long	nbr;
 	int				total;
 
@@ -67,7 +67,6 @@ int ft_num_in_hex_up(unsigned long n)
 		total += write(1, &c, 1);
 	}
 	return (total);
-
 }
 
 // int	main(void)

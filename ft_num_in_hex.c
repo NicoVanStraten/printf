@@ -6,35 +6,68 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/18 13:43:40 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/12/02 10:42:04 by nvan-str      ########   odam.nl         */
+/*   Updated: 2023/01/25 14:28:10 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
 
-int	ft_num_in_hex(int n)
+int	ft_num_in_hex_low(unsigned long n)
 {
-	int	printlen;
+	char			c;
+	unsigned long	nbr;
+	int				total;
 
-	printlen = 0;
-	if (n < 0)
+	nbr = n;
+	total = 0;
+	if (nbr >= 16)
 	{
-		write (1, "-", 1);
-		printlen++;
-		if (n < -9)
-			printlen += ft_putnbr(-(n / 16));
-		ft_putchar(-(n % 16) + 48);
-		printlen++;
+		total += ft_num_in_hex_low((nbr / 16));
+		if (nbr % 16 < 10)
+			c = (nbr % 16) + '0';
+		else
+			c = (nbr % 16) + 87;
+		total += write(1, &c, 1);
 	}
-	else
+	if (nbr < 16)
 	{
-		if (n >= 10)
-			printlen += ft_putnbr(n / 16);
-		ft_putchar((n % 16) + '0');
-		printlen++;
+		if (nbr % 16 < 10)
+			c = (nbr % 16) + '0';
+		else
+			c = (nbr % 16) + 87;
+		total += write(1, &c, 1);
 	}
-	return (printlen);
+	return (total);
+}
+
+int ft_num_in_hex_up(unsigned long n)
+{
+		char			c;
+	unsigned long	nbr;
+	int				total;
+
+	nbr = n;
+	total = 0;
+	if (nbr >= 16)
+	{
+		total += ft_num_in_hex_up((nbr / 16));
+		if (nbr % 16 < 10)
+			c = (nbr % 16) + '0';
+		else
+			c = (nbr % 16) + 55;
+		total += write(1, &c, 1);
+	}
+	if (nbr < 16)
+	{
+		if (nbr % 16 < 10)
+			c = (nbr % 16) + '0';
+		else
+			c = (nbr % 16) + 55;
+		total += write(1, &c, 1);
+	}
+	return (total);
+
 }
 
 // int	main(void)

@@ -6,7 +6,7 @@
 #    By: nvan-str <nvan-str@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/11/11 16:54:51 by nvan-str      #+#    #+#                  #
-#    Updated: 2022/12/02 10:43:09 by nvan-str      ########   odam.nl          #
+#    Updated: 2023/01/25 14:28:06 by nvan-str      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,12 +20,12 @@ SRC =	ft_putchar.c\
 		
 
 OBJ = $(SRC:.c=.o)
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra
 RM = /bin/rm -f
 
 %.o:%.c
-	@gcc -c $(FLAGS) -o $@ $^
-	@echo "📠 Compiling: $^"
+	@clang -c $(FLAGS) -o $@ $^
+	@echo "Compiling: $^"
 
 all : $(NAME)
 

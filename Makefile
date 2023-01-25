@@ -6,7 +6,7 @@
 #    By: nvan-str <nvan-str@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/11/11 16:54:51 by nvan-str      #+#    #+#                  #
-#    Updated: 2022/11/18 19:58:18 by nvan-str      ########   odam.nl          #
+#    Updated: 2023/01/25 14:17:50 by nicolaasvan   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,15 +16,16 @@ SRC =	ft_putchar.c\
 		ft_putnbr.c\
 		ft_printf.c\
 		ft_putnbr_unsigned.c\
+		ft_num_in_hex.c\
 		
 
 OBJ = $(SRC:.c=.o)
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra
 RM = /bin/rm -f
 
 %.o:%.c
-	@gcc -c $(FLAGS) -o $@ $^
-	@echo "📠 Compiling: $^"
+	@clang -c $(FLAGS) -o $@ $^
+	@echo "Compiling: $^"
 
 all : $(NAME)
 

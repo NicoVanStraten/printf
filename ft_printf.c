@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/11 17:20:04 by nvan-str      #+#    #+#                 */
-/*   Updated: 2023/01/25 14:23:48 by nicolaasvan   ########   odam.nl         */
+/*   Updated: 2023/01/25 14:32:47 by nicolaasvan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,11 @@ int	check(va_list *args, const char *s)
 		return (ft_num_in_hex_up(va_arg(*args, unsigned int)));
 	else if (*s == '%')
 		return (ft_putchar('%'));
-	// else if (*s == 'p')
-	// 	return ();
+	else if (*s == 'p')
+	{
+		write (1, "0x", 2);
+		return (ft_num_in_hex_low(va_arg(*args, unsigned long)) + 2);
+	}
 	return (0);
 }
 

@@ -6,7 +6,7 @@
 #    By: nvan-str <nvan-str@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/11/11 16:54:51 by nvan-str      #+#    #+#                  #
-#    Updated: 2023/01/25 14:28:06 by nvan-str      ########   odam.nl          #
+#    Updated: 2023/01/30 14:52:17 by nicolaasvan   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ FLAGS = -Wall -Wextra
 RM = /bin/rm -f
 
 %.o:%.c
-	@clang -c $(FLAGS) -o $@ $^
+	@gcc -c $(FLAGS) -o $@ $^
 	@echo "Compiling: $^"
 
 all : $(NAME)

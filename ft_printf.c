@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/11 17:20:04 by nvan-str      #+#    #+#                 */
-/*   Updated: 2023/03/06 12:43:26 by nicolaasvan   ########   odam.nl         */
+/*   Updated: 2023/03/06 15:22:57 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ int	check(va_list *args, const char *s)
 		return (ft_num_in_hex_low(va_arg(*args, unsigned int)));
 	else if (*s == 'X')
 		return (ft_num_in_hex_up(va_arg(*args, unsigned int)));
-	else if (*s == '%')
-		return (ft_putchar('%'));
 	else if (*s == 'p')
 	{
 		write (1, "0x", 2);
 		return (ft_num_in_hex_low(va_arg(*args, unsigned long)) + 2);
 	}
+	else
+		return (ft_putchar(*s));
 	return (0);
 }
 
@@ -52,6 +52,11 @@ int	ft_printf(const char *s, ...)
 	{
 		if (s[i] == '%')
 		{
+			if (s[i + 1] == '\0')
+			{
+				i++;
+				break ;
+			}
 			strlen += check(&args, &s[i + 1]);
 			i++;
 		}

@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/11 17:20:04 by nvan-str      #+#    #+#                 */
-/*   Updated: 2023/01/25 14:37:50 by nvan-str      ########   odam.nl         */
+/*   Updated: 2023/03/06 12:43:26 by nicolaasvan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,38 +62,3 @@ int	ft_printf(const char *s, ...)
 	va_end(args);
 	return (strlen);
 }
-
-// int	main(void)
-// {
-// 	char			*str;
-// 	int				nb;
-// 	unsigned int	unb;
-// 	char			c;
-
-// 	str = "this works";
-// 	nb = 123456;
-// 	unb = -123;
-// 	c = 'D';
-// 	ft_printf("test number: %d", nb);
-// 	ft_printf("\n----------------\n");
-// 	ft_printf("test string: %s", str);
-// 	ft_printf("\n----------------\n");
-// 	ft_printf("test char: %c", c);
-// 	ft_printf("\n----------------\n");
-
-// 	ft_printf("test char:%c %c %c \n", '0', 0, '1');
-// 	   printf("real char:%c %c %c ", '0', 0, '1');
-// 	ft_printf("\n----------------\n");
-// 	ft_printf("test char: %c %c %c \n", '1', '5', '3');
-// 	printf("real char: %c %c %c ", '1', '2', '3');
-// 	ft_printf("\n----------------\n");
-// 	ft_printf("test char: %c %c %c \n", '2', '1', 0);
-// 	printf("real char: %c %c %c ", '2', '1', 0);
-// 	ft_printf("\n----------------\n");
-// 	ft_printf("test interger: %i", nb);
-// 	ft_printf("\n----------------\n");	
-// 	ft_printf("test number: %u", unb);
-// 	ft_printf("\n----------------\n");	
-// 	ft_printf("test number: %%");
-// 	ft_printf("\n");
-// }

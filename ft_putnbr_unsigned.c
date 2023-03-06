@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/16 11:11:37 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/11/17 17:43:07 by nvan-str      ########   odam.nl         */
+/*   Updated: 2023/03/06 12:58:11 by nicolaasvan   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,3 @@ int	ft_putnbr_unsigned(unsigned int n)
 	printlen++;
 	return (printlen);
 }
-
-// int	main(void)
-// {
-// 	unsigned int	n;
-
-// 	n = -12345678;
-// 	ft_putnbr_unsigned(n);
-// 	printf("\n");
-// 	printf("%u\npenis", n);
-// }

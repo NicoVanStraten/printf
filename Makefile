@@ -6,7 +6,7 @@
 #    By: nvan-str <nvan-str@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2022/11/11 16:54:51 by nvan-str      #+#    #+#                  #
-#    Updated: 2023/01/30 14:53:33 by nicolaasvan   ########   odam.nl          #
+#    Updated: 2023/03/06 12:39:06 by nicolaasvan   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ RM = /bin/rm -f
 
 %.o:%.c
 	@gcc -c $(FLAGS) -o $@ $^
-	@echo "Compiling: $^"
+	@echo " COMPILING THE FOLOWING FILES: $^"
 
 all : $(NAME)
 
@@ -38,6 +38,6 @@ clean:
 fclean: clean
 	@$(RM) $(NAME)
 
-re: fclean all
+re:  fclean all
 	
 .PHONY: all clean fclean re 

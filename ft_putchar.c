@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/11 16:10:25 by nvan-str      #+#    #+#                 */
-/*   Updated: 2023/03/06 12:50:01 by nicolaasvan   ########   odam.nl         */
+/*   Updated: 2023/03/06 15:30:38 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 int	ft_putchar(int c)
 {
-	write (1, &c, 1);
-	return (1);
+	return (write (1, &c, 1));
 }

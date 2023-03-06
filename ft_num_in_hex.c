@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/18 13:43:40 by nvan-str      #+#    #+#                 */
-/*   Updated: 2023/01/25 14:37:31 by nvan-str      ########   odam.nl         */
+/*   Updated: 2023/03/06 15:30:54 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,17 +68,3 @@ int	ft_num_in_hex_up(unsigned long n)
 	}
 	return (total);
 }
-
-// int	main(void)
-// {
-// 	int	a;
-// 	int	b;
-// 	int	c;
-
-// 	a = 120;
-// 	b = 30;
-// 	c = 2;
-// 	printf("real function x : %x %x %x", a, b, c);
-// 	printf("\n⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶⎶\n");
-// 	printf("real function X : %X %X %X", a, b, c);
-// }

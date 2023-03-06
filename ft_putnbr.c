@@ -6,7 +6,7 @@
 /*   By: nvan-str <nvan-str@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/19 12:16:59 by nvan-str      #+#    #+#                 */
-/*   Updated: 2022/11/17 16:15:16 by nvan-str      ########   odam.nl         */
+/*   Updated: 2023/03/06 15:30:10 by nvan-str      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,3 @@ int	ft_putnbr(int n)
 	}
 	return (printlen);
 }
-
-// int	main(void)
-// {
-// 	int n;
-
-// 	n = 10000;
-// 	ft_putnbr(n);
-// }
